@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+    
+        
+    </style>
+    <a href="/createdeck">Add Deck</a> | 
+	<a href="/dropsession">LogOut</a> 
+	
+</head>
+<body style="background-color:#E0F7FA;">
+<HR>
+<div style="background-color:#0097A7;">
+<BR>
+    <h1 align='center' style="color:white; font-size:600%;">Decks</h1>
+<BR>
+</div>
+<HR><BR>
+    <table align='center' border='2px' style="font-size:110%;border-collapse: collapse;">
+        <tr>
+            <th>Deck Name</th>
+            <th>Action</th>
+        </tr>
+
+        {% for row in rows %}
+        <tr>
+            <td width='45%'><a href="/review/{{row[0]}}">{{row[0]}}</a></td>
+            <td width='70%'>
+                <a href="/deletedeck/{{row[0]}}">Delete</a>
+                <a href="/updatedeck/{{row[0]}}">Update</a> 
+                <a href="/addcard/{{row[0]}}">Add a Card</a>
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+
+    
+	<footer>
+		<a href="/webinfo">webinfo</a>
+	</footer>
+</body>
+
+
+<?php 
+$tracking_page_name="example";
+$ref=$_SERVER['HTTP_REFERER'];
+$agent=$_SERVER['HTTP_USER_AGENT'];
+$ip=$_SERVER['REMOTE_ADDR'];
+$host_name = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+?>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Card</title>
+	<a href="/">Decks</a> | 
+	<a href="/dropsession">LogOut</a>
+</head>
+
+<body style="background-color:#FFEBEE;">
+  <HR>
+  <div style="background-color:#EF9A9A;"><br>
+<h1 style="color:; font-size:400%;margin-left: 180px;">Add Card</h1><br>
+</div>
+<hr> 
+<div >   
+    <form action="/addcard/{{deckname}}" method="post">
+        <label style="margin-left:400px; font-size:130%;" for="">Deck name</label>
+        <input style="margin-left:24px;font-size:150%;" type="text" value="{{deckname}}" name="deckname" readonly>
+		<br><br>
+        <label style="margin-left:400px;font-size:130%;" for="">Front</label>
+        <input style="margin-left:73px;font-size:150%;" type="text" name="front">
+		<br><br>
+        <label style="margin-left:400px;font-size:130%;" for="">Back</label>
+        <input style="margin-left:75px;font-size:150%;" type="text" name="back">
+		<br>
+		<div align='center'>
+		<br>
+        <input type="submit" value="Add Card" >
+		</div>
+    </form>
+</div>	
+</body>
+</html>

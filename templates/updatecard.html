@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Card</title>
+	<a href="/">Decks</a> | 
+	<a href="/dropsession">LogOut</a>
+</head>
+<body style="background-color:#FFFDE7;">
+  <HR>
+  <div style="background-color:#FFF59D;"><br>
+<h1 style="color:; font-size:400%;margin-left: 180px;">Update Card </h1><br>
+</div>
+<hr>
+<div style="margin-left:250px;">
+    <form action="/updatecard/{{deckname}}/{{sno}}" method="post">
+        <label style=" font-size:130%;" for="">Card number</label>
+        <input style=" font-size:170%;margin-left:10px;" type="text" name="current" disabled value="{{sno}}">
+		<br><br>
+        <label style=" font-size:130%;" for="">Question</label>
+        <input style=" font-size:170%;margin-left:45px;" type="text" name="front"><br><br>
+		<label style=" font-size:130%;" for="">Answer</label>
+        <input style=" font-size:170%;margin-left:56px;" type="text" name="back"><br><br>
+		</div><div align='center'>
+		<br>
+        <input type="submit" value="Update Card" >
+		</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Deck</title>
+	<a href="/">Decks</a> | 
+	<a href="/dropsession">LogOut</a>
+</head>
+<body style="background-color:#E0F2F1;">
+  <HR>
+  <div style="background-color:#80CBC4;"><br>
+<h1 style="color:; font-size:400%;margin-left: 180px;">Add Deck</h1><br>
+</div>
+<hr> 
+<div style="margin-left:250px;">
+<br>
+
+    <form action="/createdeck" method="post">
+        <label style=" font-size:170%;" for="">Enter Deck Name</label>
+        <input style="margin-left:10px;" type="text" name="deckname">
+		<br>
+		</div>
+		<div align='center'>
+		<br>
+        <input type="submit" value="Add Deck" >
+		</div>
+    </form>
+
+</body>
+</html>
